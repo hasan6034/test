@@ -61,6 +61,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.selene
+
+# Copy the vibrator into recovery image
+PRODUCT_COPY_FILES += \
+	$(OUT_DIR)/target/product/selene/system/bin/hw/android.hardware.vibrator-service.selene:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hw/android.hardware.vibrator-service.selene
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
@@ -80,10 +87,3 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
-# Vibrator modules
-TARGET_RECOVERY_DEVICE_MODULES += \
-    android.hardware.vibrator-V2-ndk_platform.so
-
-RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.vibrator-V2-ndk_platform.so
-    
