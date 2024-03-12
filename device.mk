@@ -62,7 +62,7 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.selene
+    android.hardware.vibrator-service.mediatek
 
 # Copy the vibrator into recovery image
 PRODUCT_COPY_FILES += \
