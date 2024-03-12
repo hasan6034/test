@@ -66,7 +66,7 @@ PRODUCT_PACKAGES += \
 
 # Copy the vibrator into recovery image
 PRODUCT_COPY_FILES += \
-	$(OUT_DIR)/target/product/selene/system/bin/hw/android.hardware.vibrator-service.mediatek:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hw/android.hardware.vibrator-service.mediatek
+	$(OUT_DIR)/target/product/selene/system/bin/hw/android.hardware.vibrator.mediatek:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hw/android.hardware.vibrator.mediatek
 
 # Fastbootd
 PRODUCT_PACKAGES += \
