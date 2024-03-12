@@ -63,10 +63,10 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Vibrator modules
 TARGET_RECOVERY_DEVICE_MODULES += \
-    android.hardware.vibrator-V2-ndk_platform.so
+    android.hardware.vibrator-V2-ndk.so
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.vibrator-V2-ndk_platform.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.vibrator-V2-ndk.so
 
 # Fastbootd
 PRODUCT_PACKAGES += \
