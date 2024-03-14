@@ -71,3 +71,7 @@ on boot
     start boot-hal-1-2
     start health-hal-2-1
     start vibrator-selene
+
+# Enable DT2W
+on post-fs
+    write /sys/devices/platform/1100a000.spi0/spi_master/spi0/spi0.1/fts_gesture_mode "1"
