@@ -109,10 +109,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
-# Enable DT2W
-TARGET_TAP_TO_WAKE_NODE := "/dev/input/event2"
-TARGET_TAP_TO_WAKE_NODE_POLARIS_EBBG := "/dev/input/event3"
-
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
