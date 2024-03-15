@@ -17,5 +17,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/omni_selene.mk
+     $(LOCAL_DIR)/twrp_selene.mk
 

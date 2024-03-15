@@ -27,11 +27,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, device/xiaomi/selene/device.mk)
 
 # Inherit some common pb stuff
-$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := selene
-PRODUCT_NAME := omni_selene
+PRODUCT_NAME := twrp_selene
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 10
 PRODUCT_MANUFACTURER := Xiaomi
