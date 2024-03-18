@@ -71,3 +71,9 @@ on boot
     start boot-hal-1-2
     start health-hal-2-1
     start vibrator-selene
+    chown system system /sys/bus/spi/devices/spi0.1/fts_gesture_mode
+    chmod 0660 /sys/bus/spi/devices/spi0.1/fts_gesture_mode
+
+# Enable DT2W
+on post-fs
+    write /sys/bus/spi/devices/spi0.1/fts_gesture_mode "1"
