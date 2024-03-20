@@ -104,6 +104,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # AB
 AB_OTA_UPDATER := true
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
+
 # Workaround for copying error vendor files to recovery ramdisk
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
