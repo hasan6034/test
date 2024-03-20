@@ -51,7 +51,10 @@ TARGET_OTA_ASSERT_DEVICE := selene,selenes,eos
 # Kernel
 BOARD_KERNEL_CMDLINE := \
 	bootopt=64S3,32N2,64N2 \
-	androidboot.force_normal_boot=1
+	androidboot.force_normal_boot=1 \
+	loop.max_part=7 \
+	androidboot.init_fatal_reboot_target=recovery\
+	androidboot.selinux=permissive
 
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40078000
