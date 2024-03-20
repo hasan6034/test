@@ -74,4 +74,4 @@ on boot
 
 # Enable DT2W
 on post-fs
-    write /sys/devices/platform/11007000.i2c0/i2c-0/0-0038/fts_gesture_mode "1"
+    write /sys/bus/spi/devices/spi0.1/fts_gesture_mode "1"
