@@ -74,4 +74,6 @@ on boot
 
 # Enable DT2W
 on post-fs
-    write /sys/bus/spi/devices/spi0.1/fts_gesture_mode "1"
+    write /sys/touchpanel/double_tap 1
+    chown system system /sys/touchpanel/double_tap
+    write /sys/touchpanel/double_tap 1
