@@ -105,7 +105,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 AB_OTA_UPDATER := true
 
 # Power
-TARGET_TAP_TO_WAKE_NODE := "/sys/bus/spi/devices/spi0.1/fts_gesture_mode"
+TARGET_TAP_TO_WAKE_NODE := "/sys/power/wake_unlock"
 
 # Workaround for copying error vendor files to recovery ramdisk
 TARGET_COPY_OUT_PRODUCT := product
