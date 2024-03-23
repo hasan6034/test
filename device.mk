@@ -78,6 +78,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service-recovery \
     android.hardware.gatekeeper@1.0-impl-recovery
 
+# Keystore2
+PRODUCT_PACKAGES += \
+    android.system.keystore2
+
 # MTK PlPath Utils
 PRODUCT_PACKAGES += \
     mtk_plpath_utils.recovery
