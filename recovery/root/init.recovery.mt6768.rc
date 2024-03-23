@@ -31,13 +31,6 @@ service keystore_auth /system/bin/keystore_auth
     disabled
     oneshot
     seclabel u:r:recovery:s0
-
-service keystore2 /system/bin/keystore2 /tmp/misc/keystore
-    class early_hal
-    user root
-    group keystore readproc log
-    writepid /dev/cpuset/foreground/tasks
-    seclabel u:r:recovery:s0
     
 service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
     interface android.hardware.gatekeeper@1.0::IGatekeeper default
@@ -85,9 +78,3 @@ on boot
     start boot-hal-1-2
     start health-hal-2-1
     start vibrator-selene
-
-# Enable DT2W
-on post-fs
-    write /sys/touchpanel/double_tap 1
-    chown system system /sys/touchpanel/double_tap
-    write /sys/touchpanel/double_tap 1
