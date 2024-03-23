@@ -32,12 +32,13 @@ service keystore_auth /system/bin/keystore_auth
     oneshot
     seclabel u:r:recovery:s0
 
-service keystore /system/bin/keystore /tmp/misc/keystore
+service keystore2 /system/bin/keystore2 /tmp/misc/keystore
+    class early_hal
     user root
-    group root drmrpc readproc log
-    disabled
+    group keystore readproc log
+    writepid /dev/cpuset/foreground/tasks
     seclabel u:r:recovery:s0
-
+    
 service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
     interface android.hardware.gatekeeper@1.0::IGatekeeper default
     user root
