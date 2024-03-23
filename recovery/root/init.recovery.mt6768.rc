@@ -48,6 +48,12 @@ service keymaster-4-1 /system/bin/android.hardware.keymaster@4.1-service.beanpod
     oneshot
     seclabel u:r:recovery:s0
 
+service wait_for_keymaster /system/bin/wait_for_keymaster
+    user root
+    group root system
+    setenv LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
+    seclabel u:r:recovery:s0
+
 service vibrator-selene /system/bin/hw/android.hardware.vibrator-service.selene
     user root
     group root
@@ -55,6 +61,7 @@ service vibrator-selene /system/bin/hw/android.hardware.vibrator-service.selene
     seclabel u:r:recovery:s0
 
 on property:vendor.sys.listener.registered=true
+    start keystore2
     start gatekeeper-1-0
     start keymaster-4-1
     start gatekeeper-1-0
