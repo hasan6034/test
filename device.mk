@@ -47,10 +47,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service-recovery \
     android.hardware.gatekeeper@1.0-impl-recovery
 
-# Keystore2
-PRODUCT_PACKAGES += \
-    android.system.keystore2
-
 # Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
