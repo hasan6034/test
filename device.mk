@@ -56,14 +56,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Health Hal
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.1-service \
+    libhealthd.$(PRODUCT_PLATFORM)
 
-# Boot control HAL
 PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-service \
+    android.hardware.boot@1.2-mtkimpl \
     android.hardware.boot@1.2-mtkimpl.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
+
+PRODUCT_PACKAGES += \
+    bootctrl.mt6768 \
+    bootctrl.mt6768.recovery
 
 # Vibrator modules
 TARGET_RECOVERY_DEVICE_MODULES += \
