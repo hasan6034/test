@@ -21,11 +21,15 @@ LOCAL_PATH := device/xiaomi/selene
 # A/B
 AB_OTA_PARTITIONS += \
     system \
+    system_ext \
     vendor \
+    vendor_dlkm \
     product \
     boot \
     vbmeta_vendor \
-    vbmeta_system
+    vbmeta_system \
+    odm \
+    odm_dlkm
     
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
